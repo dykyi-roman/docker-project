@@ -1,4 +1,4 @@
-#Docker project (nginx + php-fpm + postgresql + mongodb)
+Docker project (nginx + php-fpm + postgresql + mongodb)
 =======
 
 ## Install
@@ -13,10 +13,13 @@ The script from the official PHP image from Docker Hub makes it easy to install 
 
 ## Command
 
++ `docker images`  - List images
 + `docker ps` - List containers  
 + `docker exec -it <process-hash> bash` - Run a command in a running container
 + `docker commit -m "added comment text" <process-hash> <my-login/repo:tag-name>` - Create a new image from a container’s changes
 + `docker push <my-login/repo:tag-name` - Push an image or a repository to a registry    
+
+Full comansd list you cant find [here](https://docs.docker.com/engine/reference/commandline/) 
 
 ## Add the Initial Admin Use For MongoDB
 
