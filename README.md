@@ -1,5 +1,14 @@
-Docker project (nginx + php-fpm + postgresql + mongodb)
+Docker project
 =======
+
+## Compose
+
++ nginx
++ php-fpm
++ postgresql
++ mongodb
++ mysql
++ adminer
 
 ## Install
 
