@@ -70,3 +70,7 @@ services:
       - "3306:3306"
     expose:    
       - "3306"
+#  redis:
+#    image: redis:latest
+#  elasticsearch:
+#    image: elasticsearch:2.4.1

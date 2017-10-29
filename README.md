@@ -33,6 +33,10 @@ The script from the official PHP image from Docker Hub makes it easy to install 
 
 Full comansd list you cant find [here](https://docs.docker.com/engine/reference/commandline/) 
 
+## How To Remove Docker Images, Containers, and Volumes
+
+[Link](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)
+
 ## Error Logs
 
 To look for an error why the container does not start, you need to run it without options `-d`
@@ -42,6 +46,12 @@ Example:
 + `sudo cocker logs <container_id>`
 
 And look for an error in the console.
+
+## Bash script for clear docker container and images
+
+Well, Docker rebuilds the layers that have changed. The rest is what was. So better remove all and run again if something not work ;) 
+
+[Link](#)
 
 ## Image Update 
 
