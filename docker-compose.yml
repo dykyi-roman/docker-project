@@ -18,7 +18,7 @@ services:
     links:
       - fpm
   fpm:
-    image: nocaut2012/php7:php7-fpm
+    image: nocaut2012/php7
 # dockerfile: ./Dockerfile
 # build: ./contaners/fpm
     volumes:
@@ -27,6 +27,7 @@ services:
       - mysql
   adminer:
     image: adminer
+    container_name: dykyi-adminer
     restart: always
     links:
       - mysql
@@ -34,35 +35,38 @@ services:
       - mysql
     ports:
       - 8888:8080
-  mongo:
-    image: mongo
-    ports:
-      - 27017:27017 # Проброс портов для внешнего доступа 
-    volumes:
-      - ./database/mongo:/data/db
-  postgres:
-    image: postgres:latest
-    ports:
-      - 5432:5432 # Проброс портов для внешнего доступа 
-    volumes:
-      - ./database/postgres:/data/postgres
-    environment:
-      POSTGRES_PASSWORD: secret
-      POSTGRES_USER: postgres
-      PGDATA: /data/postgres
+#  mongo:
+#    image: mongo
+#    container_name: dykyi-mongo
+#    ports:
+#      - 27017:27017 # Проброс портов для внешнего доступа
+#    volumes:
+#      - ./database/mongo:/data/db
+#  postgres:
+#    image: postgres:latest
+#    container_name: dykyi-postgres
+#    ports:
+#      - 5432:5432 # Проброс портов для внешнего доступа
+#    volumes:
+#      - ./database/postgres:/data/postgres
+#    environment:
+#      POSTGRES_PASSWORD: secret
+#      POSTGRES_USER: postgres
+#      PGDATA: /data/postgres
   mysql:
     image: mysql
+    container_name: dykyi-mysql
     restart: always
     volumes:
+      - ./data:/docker-entrypoint-initdb.d
       - ./database/mysql:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: 'root'
-      MYSQL_DATABASE: 'db'
-      MYSQL_USER: 'root'
-      MYSQL_PASSWORD: 'root'
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER} 
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_PORT: 3306 
     ports:
       - "3306:3306"
     expose:    
       - "3306"
-

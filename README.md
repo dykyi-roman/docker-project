@@ -14,6 +14,9 @@ Docker project
 
 + Install docker-compose
 + docker login
+
+## Run
+
 + docker-compose up -d
 
 The script from the official PHP image from Docker Hub makes it easy to install the required extensions
@@ -30,25 +33,33 @@ The script from the official PHP image from Docker Hub makes it easy to install 
 
 Full comansd list you cant find [here](https://docs.docker.com/engine/reference/commandline/) 
 
-## Add the Initial Admin Use For MongoDB
+## Error Logs
 
-> `docker exec -it some-mongo mongo admin
-  connecting to: admin
-  > db.createUser({ user: 'jsmith', pwd: 'some-initial-password', roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] });
-  Successfully added user: {
-      "user" : "jsmith",
-      "roles" : [
-          {
-              "role" : "userAdminAnyDatabase",
-              "db" : "admin"
-          }
-      ]
-  }`
-  
-### Usage:
+To look for an error why the container does not start, you need to run it without options `-d`
+Example:
 
-`$manager = new MongoDB\Driver\Manager("mongodb://mongo:27017");`  
-  
++ `docker-compose up` 
++ `sudo cocker logs <container_id>`
 
+And look for an error in the console.
+
+## Image Update 
+
+If you want update your exist image you can install package inside container `docker-php-ext-install <package_name>`
+
+Example:
+
++ `docker ps`
++ `docker exec -it <process-hash> bash`
++ `docker-php-ext-install pdo_mysql`
++ `docker commit -m "added comment text" <process-hash> <my-login/repo:tag-name>`
++ `docker push <my-login/repo:tag-name>`
++ `docker images`
++ `docker rmi <image_id>`
+
+## Adminer connect to data base
+
+![image](https://github.com/dykyi-roman/docker-projectblob/master/images/adminer.jpg)
+    
 ## Author
 [Dykyi Roman](https://www.linkedin.com/in/roman-dykyi-43428543/), e-mail: [mr.dukuy@gmail.com](mailto:mr.dukuy@gmail.com)
