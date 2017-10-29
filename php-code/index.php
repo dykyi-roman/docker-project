@@ -8,7 +8,7 @@ $dotenv->load();
 try {
     $pdo = new PDO(sprintf('mysql:host=%s;dbname=%s',
         $_ENV['MYSQL_HOST'],
-        $_ENV['MYSQL_PASSWORD']),
+        $_ENV['MYSQL_DATABASE']),
         $_ENV['MYSQL_USER'],
         $_ENV['MYSQL_PASSWORD']
     );
@@ -16,4 +16,4 @@ try {
     var_dump($exception->getMessage()); die();
 }
 
-var_dump($pdo); die();
+echo "DB connect well :)";
