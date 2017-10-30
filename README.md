@@ -73,7 +73,10 @@ Example:
     
 ## Docker Multiple Websites    
     
-Usage [nginx-proxy](https://github.com/jwilder/nginx-proxy)  
+1) Usage [nginx-proxy](https://github.com/jwilder/nginx-proxy)
+2) Or have all the sites in the one container set?
+ + Website 1: (nginx,phpfpm,mysql)
+ + Website 2: (nginx,phpfpm,mysql)
     
 ## Author
 [Dykyi Roman](https://www.linkedin.com/in/roman-dykyi-43428543/), e-mail: [mr.dukuy@gmail.com](mailto:mr.dukuy@gmail.com)
