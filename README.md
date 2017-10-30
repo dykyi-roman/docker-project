@@ -51,7 +51,7 @@ And look for an error in the console.
 
 Well, Docker rebuilds the layers that have changed. The rest is what was. So better remove all and run again if something not work ;) 
 
-[Link](#)
++ Use command `sudo sh clear.sh`
 
 ## Image Update 
 
@@ -70,6 +70,10 @@ Example:
 ## Adminer connect to data base
 
 ![image](https://github.com/dykyi-roman/docker-projectblob/master/images/adminer.jpg)
+    
+## Docker Multiple Websites    
+    
+Usage [nginx-proxy](https://github.com/jwilder/nginx-proxy)  
     
 ## Author
 [Dykyi Roman](https://www.linkedin.com/in/roman-dykyi-43428543/), e-mail: [mr.dukuy@gmail.com](mailto:mr.dukuy@gmail.com)
