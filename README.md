@@ -9,6 +9,8 @@ Docker project
 + mongodb
 + mysql
 + adminer
++ redis
++ elasticsearch
 
 ## Install
 
@@ -69,7 +71,7 @@ Example:
 
 ## Adminer connect to data base
 
-![image](https://github.com/dykyi-roman/docker-projectblob/master/images/adminer.jpg)
+![image](https://github.com/dykyi-roman/docker-projectblob/master/images/adminer.png)
     
 ## Docker Multiple Websites    
     
