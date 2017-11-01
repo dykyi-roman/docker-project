@@ -71,7 +71,7 @@ Example:
 
 ## Adminer connect to data base
 
-![image](https://github.com/dykyi-roman/docker-projectblob/master/images/adminer.png)
+![image](https://github.com/dykyi-roman/docker-project/blob/master/images/adminer.png)
     
 ## Docker Multiple Websites    
     
