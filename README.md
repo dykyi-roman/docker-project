@@ -9,6 +9,7 @@ Docker project
 + mongodb
 + mysql
 + adminer
++ vault
 + redis
 + elasticsearch
 
