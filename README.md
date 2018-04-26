@@ -36,6 +36,11 @@ The script from the official PHP image from Docker Hub makes it easy to install 
 
 Full comansd list you cant find [here](https://docs.docker.com/engine/reference/commandline/) 
 
+## Nginx responds with 403 
+
+To fix this I have to make the mounted directory and its contents publicly readable:
++ `chmod -R o+rX /tmp/webs/my-website`
+
 ## How To Remove Docker Images, Containers, and Volumes
 
 [Link](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)
