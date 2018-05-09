@@ -41,6 +41,9 @@ Full comansd list you cant find [here](https://docs.docker.com/engine/reference/
 To fix this I have to make the mounted directory and its contents publicly readable:
 + `chmod -R o+rX /tmp/webs/my-website`
 
+## Mysql Table '*.*' doesn't exist fix
++ `docker exec -it <container_id> bash -c "mysql_upgrade -uroot -proot"`
+
 ## How To Remove Docker Images, Containers, and Volumes
 
 [Link](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes)
